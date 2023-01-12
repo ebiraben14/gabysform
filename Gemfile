@@ -27,6 +27,18 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Factory bot
+gem 'factory_bot_rails', '~> 6.2'
+
+# Faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
+#Paginate
+gem 'will_paginate', '~> 3.3'
+
+#devise
+gem "devise"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
