@@ -21,7 +21,6 @@ class SurveysController < ApplicationController
 
   # POST /surveys or /surveys.json
   def create
-
     @survey = Survey.new(survey_params.merge(user_id: current_user.id))
 
     respond_to do |format|
