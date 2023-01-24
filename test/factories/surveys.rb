@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory :form do
+  factory :survey do
     name { "MyString" }
-    user_id { 1 }
+    user { nil }
   end
 end

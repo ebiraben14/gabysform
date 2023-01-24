@@ -65,6 +65,6 @@ class InputFieldsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def input_field_params
-      params.require(:input_field).permit(:placeholder, :label, :required, :form_id)
+      params.require(:input_field).permit(:placeholder, :label, :required, :hint, :survey_id)
     end
 end

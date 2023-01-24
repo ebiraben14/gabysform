@@ -14,10 +14,11 @@ class InputFieldsTest < ApplicationSystemTestCase
     visit input_fields_url
     click_on "New input field"
 
-    fill_in "Form", with: @input_field.form_id
+    fill_in "Hint", with: @input_field.hint
     fill_in "Label", with: @input_field.label
     fill_in "Placeholder", with: @input_field.placeholder
     check "Required" if @input_field.required
+    fill_in "Survey", with: @input_field.survey_id
     click_on "Create Input field"
 
     assert_text "Input field was successfully created"
@@ -28,10 +29,11 @@ class InputFieldsTest < ApplicationSystemTestCase
     visit input_field_url(@input_field)
     click_on "Edit this input field", match: :first
 
-    fill_in "Form", with: @input_field.form_id
+    fill_in "Hint", with: @input_field.hint
     fill_in "Label", with: @input_field.label
     fill_in "Placeholder", with: @input_field.placeholder
     check "Required" if @input_field.required
+    fill_in "Survey", with: @input_field.survey_id
     click_on "Update Input field"
 
     assert_text "Input field was successfully updated"

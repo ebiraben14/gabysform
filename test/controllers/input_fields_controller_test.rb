@@ -17,7 +17,7 @@ class InputFieldsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create input_field" do
     assert_difference("InputField.count") do
-      post input_fields_url, params: { input_field: { form_id: @input_field.form_id, label: @input_field.label, placeholder: @input_field.placeholder, required: @input_field.required } }
+      post input_fields_url, params: { input_field: { hint: @input_field.hint, label: @input_field.label, placeholder: @input_field.placeholder, required: @input_field.required, survey_id: @input_field.survey_id } }
     end
 
     assert_redirected_to input_field_url(InputField.last)
@@ -34,7 +34,7 @@ class InputFieldsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update input_field" do
-    patch input_field_url(@input_field), params: { input_field: { form_id: @input_field.form_id, label: @input_field.label, placeholder: @input_field.placeholder, required: @input_field.required } }
+    patch input_field_url(@input_field), params: { input_field: { hint: @input_field.hint, label: @input_field.label, placeholder: @input_field.placeholder, required: @input_field.required, survey_id: @input_field.survey_id } }
     assert_redirected_to input_field_url(@input_field)
   end
 

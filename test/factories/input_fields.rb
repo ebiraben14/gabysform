@@ -3,6 +3,7 @@ FactoryBot.define do
     placeholder { "MyString" }
     label { "MyString" }
     required { false }
-    form_id { 1 }
+    hint { "MyString" }
+    survey { nil }
   end
 end

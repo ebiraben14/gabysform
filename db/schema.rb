@@ -10,21 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_150842) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_12_160956) do
   create_table "forms", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_forms_on_user_id"
   end
 
   create_table "input_fields", force: :cascade do |t|
     t.string "placeholder"
     t.string "label"
     t.boolean "required"
-    t.integer "form_id"
+    t.string "hint"
+    t.integer "survey_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_input_fields_on_survey_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,4 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_150842) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "forms", "users"
+  add_foreign_key "input_fields", "surveys"
+  add_foreign_key "surveys", "users"
 end

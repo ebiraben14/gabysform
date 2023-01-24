@@ -4,7 +4,8 @@ class CreateInputFields < ActiveRecord::Migration[7.0]
       t.string :placeholder
       t.string :label
       t.boolean :required
-      t.integer :form_id
+      t.string :hint
+      t.references :survey, null: false, foreign_key: true
 
       t.timestamps
     end
