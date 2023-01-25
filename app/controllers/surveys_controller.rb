@@ -1,5 +1,6 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   # GET /surveys or /surveys.json
   def index
