@@ -18,6 +18,9 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1/edit
   def edit
+    unless current_user 
+      redirect_to home_path, :alert => "Restricted area" 
+    end
   end
 
   # POST /surveys or /surveys.json
