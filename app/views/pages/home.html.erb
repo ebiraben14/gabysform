@@ -1,11 +1,6 @@
 <h1>Our first view 🚀</h1>
 
-<%if current_user%>
-<button><%= link_to "Sign Out", destroy_user_session_path%></button>
-<%else%>
-<button><%= link_to "Sign Up", new_user_registration_path %></button>
-<button><%= link_to "Sign In", new_user_session_path %></button>
-<%end%>
+<button><%= link_to "Forms", "/surveys" %></button>
 <br>
 <br>
-<button><%= link_to "Surveys", "/surveys" %></button>
+<button><%= link_to "Users", "/users" %></button>

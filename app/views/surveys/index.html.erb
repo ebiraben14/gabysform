@@ -6,11 +6,9 @@
   <% @surveys.each do |survey| %>
     <%= render survey %>
     <p>
-     <button><%= link_to "Show this survey", survey %></button>
+      <%= link_to "Show this survey", survey %>
     </p>
   <% end %>
 </div>
 
-<button><%= link_to "New survey", new_survey_path %></button>
-
-<button><%= link_to "Home", "/" %></button>
+<%= link_to "New survey", new_survey_path %>

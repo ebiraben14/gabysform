@@ -1,0 +1,2 @@
+class Text < Basis
+end

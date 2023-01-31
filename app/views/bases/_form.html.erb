@@ -1,0 +1,17 @@
+<%= form_with(model: basis) do |form| %>
+  <% if basis.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(basis.errors.count, "error") %> prohibited this basis from being saved:</h2>
+
+      <ul>
+        <% basis.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -3,8 +3,8 @@
 <%= render @survey %>
 
 <div>
-  <button><%= link_to "Edit this survey", edit_survey_path(@survey) %></button>
-  <br>
-  <br>
-  <button><%= link_to "Back to surveys", surveys_path %></button>
+  <%= link_to "Edit this survey", edit_survey_path(@survey) %> |
+  <%= link_to "Back to surveys", surveys_path %>
+
+  <%= button_to "Destroy this survey", @survey, method: :delete %>
 </div>

@@ -5,8 +5,6 @@
 <br>
 
 <div>
-  <%= button_to "Destroy this survey", @survey, method: :delete %>
-  <br>
-  <br>
-  <button><%= link_to "Back to survey", @survey %></button>
+  <%= link_to "Show this survey", @survey %> |
+  <%= link_to "Back to surveys", surveys_path %>
 </div>
