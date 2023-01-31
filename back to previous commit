@@ -1,0 +1,48 @@
+Revert "Revert "devise ok""
+
+This reverts commit 5231dfd540fcca41f8c64675946cf6dfa38c5ad0.
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche main
+# Votre branche est en avance sur 'origin/main' de 1 commit.
+#   (utilisez "git push" pour publier vos commits locaux)
+#
+# Modifications qui seront validées :
+#	modifié :         app/controllers/application_controller.rb
+#	supprimé :        app/controllers/bases_controller.rb
+#	modifié :         app/controllers/pages_controller.rb
+#	modifié :         app/controllers/surveys_controller.rb
+#	supprimé :        app/helpers/bases_helper.rb
+#	supprimé :        app/models/input_fieds/basis.rb
+#	supprimé :        app/models/input_fieds/text.rb
+#	supprimé :        app/views/bases/_base.html.erb
+#	supprimé :        app/views/bases/_basis.json.jbuilder
+#	supprimé :        app/views/bases/_form.html.erb
+#	supprimé :        app/views/bases/edit.html.erb
+#	supprimé :        app/views/bases/index.html.erb
+#	supprimé :        app/views/bases/index.json.jbuilder
+#	supprimé :        app/views/bases/new.html.erb
+#	supprimé :        app/views/bases/show.html.erb
+#	supprimé :        app/views/bases/show.json.jbuilder
+#	modifié :         app/views/pages/home.html.erb
+#	modifié :         app/views/surveys/edit.html.erb
+#	modifié :         app/views/surveys/index.html.erb
+#	modifié :         app/views/surveys/new.html.erb
+#	modifié :         app/views/surveys/show.html.erb
+#	modifié :         config/initializers/devise.rb
+#	modifié :         config/routes.rb
+#	supprimé :        db/migrate/20230131091655_drop_input_fields.rb
+#	supprimé :        db/migrate/20230131092921_create_bases.rb
+#	supprimé :        db/migrate/20230131093142_create_texts.rb
+#	supprimé :        test/controllers/bases_controller_test.rb
+#	supprimé :        test/factories/bases.rb
+#	supprimé :        test/factories/texts.rb
+#	supprimé :        test/models/basis_test.rb
+#	supprimé :        test/models/text_test.rb
+#	supprimé :        test/system/bases_test.rb
+#
+# Fichiers non suivis:
+#	git/
+#
