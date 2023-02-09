@@ -3,12 +3,12 @@
 <h1>Input fields</h1>
 
 <div id="input_fields">
-  <% @input_fields.each do |input_field| %>
-    <%= render 'input_field', input_field: input_field %>
+  <% @input_fields.each do |input| %>
+    <%= render 'input_field', input_field: input %>
     <p>
-      <%= link_to "Show this input field", input_field_path(input_field) %>
+      <%= link_to "Show this input field", input_field_path(input) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New input field", new_input_field_path %>
+<%= link_to "New input field", new_input_field_path(@input_field) %>
