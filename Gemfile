@@ -43,6 +43,10 @@ gem 'pry-byebug'
 
 gem 'pry', '~> 0.13.1'
 
+gem 'simple_form'
+
+gem 'bootstrap-sass'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

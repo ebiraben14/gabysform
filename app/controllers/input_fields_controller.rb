@@ -3,7 +3,7 @@ class InputFieldsController < ApplicationController
 
   # GET /input_fields or /input_fields.json
   def index
-    @input_fields = InputField.all
+    @input_fields = InputField::Base.all
   end
 
   # GET /input_fields/1 or /input_fields/1.json
@@ -12,7 +12,7 @@ class InputFieldsController < ApplicationController
 
   # GET /input_fields/new
   def new
-    @input_field = InputField.new
+    @input_field = InputField::Base.new
   end
 
   # GET /input_fields/1/edit
@@ -21,7 +21,7 @@ class InputFieldsController < ApplicationController
 
   # POST /input_fields or /input_fields.json
   def create
-    @input_field = InputField.new(input_field_params)
+    @input_field = InputField::Base.new(input_field_params)
 
     respond_to do |format|
       if @input_field.save
@@ -60,7 +60,7 @@ class InputFieldsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_input_field
-      @input_field = InputField.find(params[:id])
+      @input_field = InputField::Base.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

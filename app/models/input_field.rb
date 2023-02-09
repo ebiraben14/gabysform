@@ -1,3 +1,2 @@
-class InputField < ApplicationRecord
-  belongs_to :survey
+module InputField
 end

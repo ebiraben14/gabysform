@@ -4,9 +4,9 @@
 
 <div id="input_fields">
   <% @input_fields.each do |input_field| %>
-    <%= render input_field %>
+    <%= render 'input_field', input_field: input_field %>
     <p>
-      <%= link_to "Show this input field", input_field %>
+      <%= link_to "Show this input field", input_field_path(input_field) %>
     </p>
   <% end %>
 </div>
