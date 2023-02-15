@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @survey %>
+<%= render partial: "input_fields/form", input_field: @input_field%>$
+
 
 <div>
   <button><%= link_to "Edit this survey", edit_survey_path(@survey) %></button>

@@ -9,6 +9,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1 or /surveys/1.json
   def show
+    @input_field = @survey.input_fields.new
   end
 
   # GET /surveys/new

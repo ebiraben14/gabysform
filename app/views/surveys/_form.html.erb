@@ -10,13 +10,11 @@
       </ul>
     </div>
   <% end %>
-
-
-
-
-
+  <br>
+  <br>
   <%= simple_form_for @survey do |f| %>
-    <%= f.input :name%>
+    <%= f.input :name, placeholder: 'Your username please'%>
+    <br>
     <%= f.button :submit %>
   <% end %>
 
