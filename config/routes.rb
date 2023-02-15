@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  resources :surveys
 
-  resources :input_fields
+  resources :surveys do
+    resources :input_fields, only: [:create]
+  end
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

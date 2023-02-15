@@ -22,10 +22,12 @@ class InputFieldsController < ApplicationController
   # POST /input_fields or /input_fields.json
   def create
     @input_field = InputField::Base.new(input_field_params)
+    @input_field.survey_id = params[:survey_id]
+    binding.pry
 
     respond_to do |format|
       if @input_field.save
-        format.html { redirect_to input_field_url(@input_field), notice: "Input field was successfully created." }
+        format.html { redirect_to survey_path(params[:survey_id]), notice: "Input field was successfully created." }
         format.json { render :show, status: :created, location: @input_field }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +67,6 @@ class InputFieldsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def input_field_params
-      params.require(:input_field).permit(:placeholder, :label, :required, :hint, :survey_id)
+      params.require(:input_field).permit(:placeholder, :type, :label, :required, :hint, :survey_id)
     end
 end
