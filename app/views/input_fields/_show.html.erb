@@ -1,0 +1,12 @@
+<div id="input_fields">
+  <% @input_fields.each do |input| %>
+    <p>
+        <strong>Type:</strong>
+         <%= input.type %>
+    </p>
+    <p>
+        <strong>Survey:</strong>
+        <%= input.survey_id %>
+    </p>
+  <% end %>
+</div>

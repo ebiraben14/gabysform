@@ -3,9 +3,3 @@
 
 <%= render 'input_field', input_field: @input_field %>
 
-<div>
-  <%= link_to "Edit this input field", edit_input_field_path(@input_field) %> |
-  <%= link_to "Back to input fields", input_fields_path %>
-
-  <%= button_to "Destroy this input field", input_field_path(@input_field), method: :delete %>
-</div>

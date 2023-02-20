@@ -23,7 +23,6 @@ class InputFieldsController < ApplicationController
   def create
     @input_field = InputField::Base.new(input_field_params)
     @input_field.survey_id = params[:survey_id]
-    binding.pry
 
     respond_to do |format|
       if @input_field.save

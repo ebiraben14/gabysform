@@ -1,4 +1,4 @@
-<%= simple_form_for(input_field, url: survey_input_fields_path(survey, toto: "titi"), as: :input_field, local: true) do |f| %>
+<%= simple_form_for(input_field, url: survey_input_fields_path(survey), as: :input_field, local: true) do |f| %>
   <% if @input_field.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(input_field.errors.count, "error") %> prohibited this input_field from being saved:</h2>
@@ -16,5 +16,8 @@
   
   <div>
     <%= f.submit %>
+  </div>
+
+  <div>
   </div>
 <% end %>

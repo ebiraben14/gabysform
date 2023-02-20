@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
 
   resources :surveys do
-    resources :input_fields, only: [:create]
+    resources :input_fields, only: [:create, :show]
   end
 
 
