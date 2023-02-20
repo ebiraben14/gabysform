@@ -53,7 +53,7 @@ class InputFieldsController < ApplicationController
     @input_field.destroy
 
     respond_to do |format|
-      format.html { redirect_to input_fields_url, notice: "Input field was successfully destroyed." }
+      format.html { redirect_to survey_path(params[:survey_id]), notice: "Input field was successfully destroyed." }
       format.json { head :no_content }
     end
   end

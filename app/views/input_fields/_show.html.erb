@@ -8,5 +8,8 @@
         <strong>Survey:</strong>
         <%= input.survey_id %>
     </p>
+    <div>
+        <%= button_to "Destroy this Input Field", survey_input_field_url(input.survey, input), method: :delete %>
+    </div>
   <% end %>
 </div>
