@@ -1,15 +1,14 @@
 module InputField
-    class Integer < Base
+    class Datetime < Base
         
         # store_accessor :data, :placeholder
 
         def input_name
-            'Integer'
+            'datetime'
         end
 
         def input_placeholder
-            "ici du Integer"
+            "ici du datetime"
         end
     end
 end
-

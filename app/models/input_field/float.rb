@@ -1,14 +1,14 @@
 module InputField
-    class Integer < Base
+    class Float < Base
         
         # store_accessor :data, :placeholder
 
         def input_name
-            'Integer'
+            'Float'
         end
 
         def input_placeholder
-            "ici du Integer"
+            "ici du Float"
         end
     end
 end

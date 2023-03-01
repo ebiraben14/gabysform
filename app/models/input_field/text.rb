@@ -4,10 +4,10 @@ module InputField
         # store_accessor :data, :placeholder
 
         def input_name
-            'text456'
+            'Text'
         end
 
-        def self.placeholder
+        def input_placeholder
             "ici du texte"
         end
     end

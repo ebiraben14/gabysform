@@ -1,11 +1,13 @@
-<div id="<%= dom_id input_field %>">
-  <p>
-    <strong>Placeholder:</strong>
-    <%= input_field.type %>
-  </p>
-  <p>
-    <strong>Survey:</strong>
-    <%= input_field.survey_id %>
-  </p>
-
+<div id="input_fields">
+  <% input_fields.each do |input_field| %>
+    <div>
+      <label>Veuillez renseigner <%=input_field.input_name%> </label>
+      <br>
+      <input placeholder= " ici <%=input_field.input_placeholder%>" >
+      <%= button_to "Destroy this Input Field", survey_input_field_url(input_field.survey, input_field), method: :delete, class: "btn btn-gradient" %>
+    </div>
+    <br>
+  <% end %>
+  <br>
+  <br>
 </div>

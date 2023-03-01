@@ -1,15 +1,14 @@
 module InputField
-    class Integer < Base
+    class Email < Base
         
         # store_accessor :data, :placeholder
 
         def input_name
-            'Integer'
+            'Email'
         end
 
         def input_placeholder
-            "ici du Integer"
+            "ici du email"
         end
     end
 end
-

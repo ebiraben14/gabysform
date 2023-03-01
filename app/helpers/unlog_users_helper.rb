@@ -1,0 +1,2 @@
+module UnlogUsersHelper
+end
