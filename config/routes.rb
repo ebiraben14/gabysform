@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :input_fields, only: [:create, :show, :destroy]
   end
 
-  resources :unlog_users
+  resources :answers
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
