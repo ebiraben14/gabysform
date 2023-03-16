@@ -1,5 +1,5 @@
 <div id="test">
-<%= simple_form_for @answer do |f| %>
+<%= simple_form_for @survey do |f| %>
   <% if survey.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
@@ -13,13 +13,10 @@
   <% end %>
   <br>
   <br>
-  <%= simple_form_for @answer do |f| %>
-    <br>
-    <%= @answer.input_fields %>
+  <%= simple_form_for @survey do |f| %>
     <br>
     <%= f.button :submit %>
   <% end %>
-
 <% end %>
 
 </div>

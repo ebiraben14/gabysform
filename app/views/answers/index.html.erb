@@ -3,10 +3,10 @@
 <h1>Answers Surveys</h1>
 
 <div id="answers_surveys">
-  <% @answers.each do |answer| %>
-    <%= render answer %>
+  <% @surveys.each do |survey| %>
+    <%= render survey %>
     <p>
-     <button><%= link_to "Show this survey", answer_path(answer) %></button>
+     <button><%= link_to "Show this survey", answer_path(survey) %></button>
 
     </p>
   <% end %>

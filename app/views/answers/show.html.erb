@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @answer %>
+<%= render @survey %>
 <%= render "input_fields", input_fields: @input_fields%>
-<%= render "form", input_field: @input_field, survey: @answer %>
+<%= render "form", input_field: @input_field, survey: @survey %>
 
 <div>
   <button><%= link_to "Back to surveys", answers_path %></button>
