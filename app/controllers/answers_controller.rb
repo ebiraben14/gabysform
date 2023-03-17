@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
     before_action :set_survey, only: %i[ show edit update destroy ]
-    skip_before_action :authenticate_user!, only: %i[index show]
+    skip_before_action :authenticate_user!, only: %i[index show new update]
+    skip_before_action :verify_authenticity_token
 
     def index
         @answers = Answer.all
@@ -18,10 +19,11 @@ class AnswersController < ApplicationController
 
     def create
       @answer = Answer.new
-  
+      @answer.survey_id = params[:survey_id]
+      binding.pry
       respond_to do |format|
         if @answer.save
-          format.html { redirect_to survey_url(@answer), notice: "Survey was successfully created." }
+          format.html { redirect_to survey_url(@answer), notice: "Answer was successfully created." }
         else
           format.html { render :new, status: :unprocessable_entity }
         end
@@ -39,8 +41,8 @@ class AnswersController < ApplicationController
     #   params.require(:survey).permit(:name, :user_id, :survey)
     # end
 
-    # def survey_params
-    #   params.require(:survey).permit(:name, :user_id)
-    # end
+    def answer_params
+      params.require(:answer).permit(:text, :integer, :survey_id)
+    end
 end
 

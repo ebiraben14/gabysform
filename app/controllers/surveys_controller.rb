@@ -55,7 +55,6 @@ class SurveysController < ApplicationController
 
   # DELETE /surveys/1 or /surveys/1.json
   def destroy
-    binding.pry
     @survey.destroy
     respond_to do |format|
       format.html { redirect_to surveys_path, notice: "Survey was successfully destroyed." }
